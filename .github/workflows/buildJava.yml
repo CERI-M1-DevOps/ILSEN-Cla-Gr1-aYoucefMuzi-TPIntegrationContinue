@@ -21,4 +21,4 @@ jobs:
           distribution: 'corretto'
 
       - name: Package avec Maven
-        uses: mvn -B package
+        run: mvn -B package
