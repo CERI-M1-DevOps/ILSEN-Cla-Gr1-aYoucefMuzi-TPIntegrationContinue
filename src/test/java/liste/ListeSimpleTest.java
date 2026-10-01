@@ -66,6 +66,8 @@ public class ListeSimpleTest {
     void modifiePremierListeVide() {
         listeATester.modifiePremier(1, 2);
         assertEquals("ListeSimple()", listeATester.toString());
+        assertNull(listeATester.tete)
+        assertEquals(0, listeATester.getSize());
     }
 
     @Test
@@ -84,6 +86,14 @@ public class ListeSimpleTest {
         listeATester.supprimePremier(1);
         assertNull(listeATester.tete);
         assertEquals(0, listeATester.getSize());
+    }
+
+    @Test
+    void supprimePremierListeTaille1TeteDifferente() {
+        listeATester.ajout(1)
+        listeATester.supprimePremier(2);
+        assertNull(listeATester.tete.getSuivant());
+        assertEquals(1, listeATester.getSize());
     }
 
     @Test
