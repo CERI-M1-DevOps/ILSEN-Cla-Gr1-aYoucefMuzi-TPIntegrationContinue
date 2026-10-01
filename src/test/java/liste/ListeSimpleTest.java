@@ -63,6 +63,13 @@ public class ListeSimpleTest {
     }
 
     @Test
+    void modifiePremierListeVide() {
+        listeATester.modifiePremier(1, 2);
+        assertEquals("ListeSimple()", listeATester.toString());
+        assertEquals(null, listeATester.tete.getElement());
+    }
+
+    @Test
     void modifieTous() {
         listeATester.ajout(1);
         listeATester.ajout(2);
