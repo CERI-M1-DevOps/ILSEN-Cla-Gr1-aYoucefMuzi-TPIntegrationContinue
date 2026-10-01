@@ -257,16 +257,15 @@ public class ListeSimpleTest {
     }
 
     @Test
-    void echangerNoeudAvecNoeudIdentique() {
-        listeATester.ajout(1);
-        listeATester.ajout(2);
-        Noeud r1 = listeATester.tete;
+    void echangerNoeudAvecLuiMeme() {
+        listeATester.ajout(5);
+        listeATester.ajout(4);
         listeATester.ajout(3);
+        Noeud r = listeATester.tete;
         listeATester.ajout(2);
-        Noeud r2 = listeATester.tete;
         listeATester.ajout(1);
-        assertEquals("ListeSimple(Noeud(1), Noeud(2), Noeud(3), Noeud(2), Noeud(1))", listeATester.toString());
-        listeATester.echanger(r1, r2);
-        assertEquals("ListeSimple(Noeud(1), Noeud(2), Noeud(3), Noeud(2), Noeud(1))", listeATester.toString());
+        assertEquals("ListeSimple(Noeud(1), Noeud(2), Noeud(3), Noeud(4), Noeud(5))", listeATester.toString());
+        listeATester.echanger(r, r);
+        assertEquals("ListeSimple(Noeud(1), Noeud(2), Noeud(3), Noeud(4), Noeud(5))", listeATester.toString());
     }
 }
