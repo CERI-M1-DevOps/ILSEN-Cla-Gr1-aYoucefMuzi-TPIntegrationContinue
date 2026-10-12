@@ -28,7 +28,7 @@ jobs:
           cache: maven
 
       - name: Génération de la documentation Javadoc
-        run: mvn -B javadoc:javadoc
+        run: mvn -B javadoc::javadoc
 
       - name: Publication sur GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
